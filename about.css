@@ -1,0 +1,313 @@
+/* font google*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+}
+
+header .logo {
+  font-size: 35px;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+header .logo span {
+  color: #fc4040;
+}
+header nav {
+  position: relative;
+  padding: 10px 0;
+  border-radius: 10px;
+  position: relative;
+  left: -400px;
+}
+header nav a {
+  position: relative;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 10px;
+  padding: 8px 10px;
+  color: #fff;
+  z-index: 2;
+}
+header nav span {
+  position: absolute;
+  height: 100%;
+  width: 90px;
+  background-color: #fc4040;
+  left: 102px;
+  top: 0;
+  transition: 0.4s linear;
+  border-radius: 10px;
+}
+header nav a:nth-child(1):hover ~ span {
+  left: 0;
+}
+header nav a:nth-child(2):hover ~ span {
+  left: 100px;
+}
+header nav a:nth-child(3):hover ~ span {
+  left: 195px;
+}
+header nav a:nth-child(4):hover ~ span {
+  left: 305px;
+}
+header nav a:nth-child(5):hover ~ span {
+  left: 420px;
+}
+header .link a {
+  font-size: 24px;
+  color: #fff;
+  margin-left: 10px;
+  transition: 0.4s ease;
+}
+
+header .link a:hover {
+  color: #fc4040;
+}
+/* strat section Home*/
+.Home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 6%;
+  justify-content: space-between;
+  cursor: default;
+}
+
+.Home .content h4 {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #fff;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+.Home .content h1 {
+  font-size: 70px;
+  text-transform: capitalize;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.Home .content h1 span {
+  color: #fc4040;
+}
+
+.Home .content h3 {
+  font-size: 32px;
+  text-transform: capitalize;
+  color: #eee;
+  letter-spacing: 1px;
+}
+
+.Home .content p {
+  color: #999;
+  margin: 20px 0 30px;
+}
+
+.Home .content .btn {
+  display: inline-block;
+  padding: 8px 32px;
+  border: double #fc4040 8px;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #fc4040;
+  position: relative;
+  transition: 0.4s ease;
+  z-index: 99;
+}
+.Home .content .btn:hover {
+  color: #000;
+}
+
+.Home .content .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #fc4040;
+  transition: 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.Home .content .btn:hover::before {
+  width: 100%;
+}
+
+.Home .content .link-social {
+  position: absolute;
+  bottom: 10%;
+}
+
+.Home .content .link-social a {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border: solid 3px #fc4040;
+  justify-content: center;
+  align-items: center;
+  color: #fc4040;
+  font-size: 23px;
+  text-decoration: none;
+  border-radius: 15px 0;
+  margin-left: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.Home .content .link-social a:hover {
+  color: #000;
+}
+.Home .content .link-social a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #fc4040;
+  transition: 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.Home .content .link-social a:hover::before {
+  width: 100%;
+}
+.Home img {
+  height: 500px;
+  position: relative;
+  left: -100px;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+.Home img:hover {
+  transform: scale(1.1);
+}
+
+/* end section Home*/
+@media screen and (max-width: 1200px) {
+  .Home {
+    flex-direction: column;
+    padding: 0 6%;
+  }
+  .Home img {
+    position: relative;
+    left: 0;
+    top: -20px;
+  }
+  header nav {
+    left: 0;
+    top: -20px;
+  }
+  header nav a {
+    font-size: 16px;
+  }
+  .navbar {
+    display: none;
+  }
+  header nav span {
+    width: 70px;
+    height: 40px;
+  }
+  .link-social {
+    display: none;
+  }
+  .h1-services {
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  img {
+    display: block;
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+  .img-logo:active {
+    transform: scale(1.5);
+    transition: 1s linear;
+  }
+  .btn {
+    display: inline-block;
+    padding: 8px 32px;
+    border: double #fc4040 8px;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fc4040;
+    position: relative;
+    transition: 0.4s ease;
+    z-index: 99;
+  }
+  .btn:active {
+    color: #000;
+  }
+
+  .btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #fc4040;
+    transition: 0.4s ease-in-out;
+    z-index: -1;
+  }
+
+  .btn:hover::before {
+    width: 100%;
+  }
+  .span-nthx {
+    font-size: 25px;
+  }
+  .h1-nthx {
+    font-size: 10px;
+    position: relative;
+    left: -1%;
+  }
+  .logo {
+    display: none;
+  }
+}
+.p-description {
+  font-size: 25px;
+  color: #fff;
+}

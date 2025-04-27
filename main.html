@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nthx Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="main.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">Nthx <span>...</span></h1>
+    <nav class="navbar">
+      <a href="main.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="reseaux.html">Socials</a>
+      <span></span>
+    </nav>
+  </header>
+
+  <div class="menu-telephone">
+    <input type="checkbox" id="myInput" class="myinput">
+    <label for="myInput">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+      </label>
+    <aside>
+      
+      <div class="aside-section aside-right">
+        <ul class="aside-list">
+          <li><a href="about.html" class="aside-anchor">About</a></li>
+          <li><a href="shop.html" class="aside-anchor">Shop</a></li>
+          <li><a href="contact.html" class="aside-anchor">Contact</a></li>
+          <li><a href="reseaux.html" class="aside-anchor">Socials</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  
+
+  <!-- Section Home -->
+  <section class="Home">
+    <div class="content">
+      <h1 class="h1-nthx">I'm <span class="span-nthx">Nthx</span></h1>
+      <h3 class="h3-web">I'm a web programmer</h3>
+      <p class="p-web">
+        I used HTML and CSS to create and design the website.<br>
+        I also know how to code in C#, Java, and Python.
+      </p>
+    </div>
+    <img class="img-logo" src="ai-generated-8499585.png" alt="Profile Image" />
+  </section>
+
+  <!-- JS -->
+   <!-- JS -->
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleBtn = document.querySelector(".menu-toggle");
+        const menu = document.getElementById("mobileMenu");
+        toggleBtn.addEventListener("click", () => {
+  console.log("Clic sur menu-toggle détecté !");
+  menu.classList.toggle("visible");
+});
+
+      });
+    </script>
+ 
+ 
+</body>
+</html>
